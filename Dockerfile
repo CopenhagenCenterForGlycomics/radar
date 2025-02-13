@@ -16,4 +16,4 @@ COPY --from=compile-image /usr/local/bin/lfasta /usr/local/bin/lfasta
 COPY --from=compile-image /usr/local/bin/radar.py /usr/local/bin/radar.py
 COPY --from=compile-image /usr/local/lib/python2.7/dist-packages/Radar-1.3-py2.7-linux-x86_64.egg /usr/local/lib/python2.7/dist-packages/Radar-1.3-py2.7-linux-x86_64.egg
 
-CMD ['/usr/bin/python2', '/usr/local/bin/radar.py']
+CMD ["/usr/bin/python2", "/usr/local/bin/radar.py"]
