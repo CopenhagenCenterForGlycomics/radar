@@ -42,6 +42,14 @@ path.
       
 	This will install radar.py in your path. Please make sure
 	you have the appropriate permissions.
+
+OR (skipping 2.1-2.4)
+
+	bash build.sh
+
+The python3 version isn't working because of some string/byte error that needs to be fixed, but
+it gets built anyway.
+
       
 2.5 radar: classic installation of C executable
       
