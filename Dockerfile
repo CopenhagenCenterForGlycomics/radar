@@ -1,4 +1,4 @@
-FROM ubuntu:latest AS compile-image
+FROM ubuntu:22.04 AS compile-image
 
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends build-essential autoconf python3-setuptools python3-setuptools-whl cython3 python3-wheel  python2-dev python-pip python-setuptools
@@ -8,7 +8,7 @@ ADD . /radar
 RUN bash build.sh
 
 
-FROM ubuntu:latest AS runtime-image
+FROM ubuntu:22.04 AS runtime-image
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends python2 python-setuptools
 

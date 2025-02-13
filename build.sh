@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt-get install -y build-essential autoconf python3-setuptools python3-setuptools-whl cython3 python3-wheel wget python2-dev python2-pip python2-setuptools
+apt-get install -y build-essential autoconf python3-setuptools python3-setuptools-whl cython3 python3-wheel wget python2-dev python-pip python-setuptools
 
 pip2 install Cython
 
