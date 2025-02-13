@@ -81,7 +81,7 @@ class RadarRepeat:
 
     def __str__(self):
         return "\t".join(
-            map(str, (self.nrepeats, self.score, self.length, self.level)) +\
+            list(map(str, (self.nrepeats, self.score, self.length, self.level))) +\
             "\n".join(self.repeat_units))
 
     def build_result(self, file):

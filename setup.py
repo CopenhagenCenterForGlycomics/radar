@@ -12,16 +12,16 @@ from distutils.extension import Extension
 try:
     from Cython.Distutils import build_ext
 except:
-    print """Cython not installed. Please install cython from
+    print("""Cython not installed. Please install cython from
     http://cython.org.
-"""
+""")
     sys.exit(1)
 
 # check if lfasta exitst
 retcode = subprocess.call("which lfasta",
                           shell=True)
 if retcode != 0:
-    print """WARNING: could not find lfasta in your path.
+    print("""WARNING: could not find lfasta in your path.
 
 Please download the source code of W.R. Pearson's fasta package and
 build lfasta using the following commands:
@@ -34,7 +34,7 @@ sh fasta2.shar
 make lfasta
 
 Copy the lfasta executable somewhere into your path.
-"""
+""")
 
 c_sources = [x for x in glob.glob("src/*.c") if x not in "src/main.c"]
 
