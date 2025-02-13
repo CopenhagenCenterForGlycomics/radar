@@ -18,4 +18,4 @@ COPY --from=compile-image /usr/local/lib/python2.7/dist-packages/Radar-1.3-py2.7
 
 CMD ['/usr/local/bin/radar.py']
 
-ENTRYPOINT ['python2']
+ENTRYPOINT ['/usr/bin/python2']
