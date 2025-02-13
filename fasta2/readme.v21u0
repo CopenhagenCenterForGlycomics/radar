@@ -1,0 +1,55 @@
+** January, 2007
+
+Modify align.c (used for global alignments) to use the same scoring matrices, and other options, as lalign2.c.
+
+Makefile has been modified so that make all only makes FASTA2 programs
+that are not part of FASTA3.  The search programs are no longer made
+by default.
+
+** December, 2006
+
+Modify fffasta.c to support the **pam2 global in upam.gbl, rather than
+pam2[][] - **pam2 was introduced for lalign2.c/lsim3.c.
+
+** August, October 2006, 21u08 (lalign2.c)
+
+Make some efforts to remove global variables from lsim2.c, by
+replacing it with lsim3.c.  Initial efforts in August, 2006,
+introduced a bug, which was detected and fixed in October.
+
+Provide option to show identical alignments.
+
+** May, 2005,  21u07 (lalign.c)
+
+Modify the code that checks for identical sequences to not assume
+sequences are identical just because the filenames are.  They may
+be different because of sub-setting.
+
+Add -I option to show identical alignment.
+
+Update lalign.1 documentation.
+
+** April, 2004, 21u06 (lalign2.c)
+
+Fix problem reading external scoring matrix files.  The file
+was not read, and then sequences were not read properly.
+
+Incorporate GAP_OPEN gap matrix options.
+
+Changes to allow G:U RNA base matches.
+
+** March, 2000, 21u02 (lalign.c) 
+
+Added '-N length' option to limit query, library sequences to
+"length".  Corrected problems with sequence numbering when
+subsequences were specified.
+
+Modifications to nrand.c to keep more bits and return random numbers
+from 0..n-1.  Use "nrandom.c" rather than nrand.c if random() is
+available.
+
+Fixes to shuffling routines in randlib.c.
+
+** November, 2003
+
+Add Blosum80 matrix to lalign.c, upam.gbl.
