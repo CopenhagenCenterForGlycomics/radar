@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt-get install -y build-essential autoconf python3-setuptools-whl cython3 python3-wheel wget
+apt-get install -y build-essential autoconf python3-setuptools python3-setuptools-whl cython3 python3-wheel wget
 
 (
 	cd fasta2
